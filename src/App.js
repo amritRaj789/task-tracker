@@ -27,7 +27,7 @@ const App = () => {
   return (
     <div className="container">
       <Header title="Hello Stupid"/>
-      <Tasks/>
+      <Tasks tasks={tasks}/>
     </div>
   );
 }
