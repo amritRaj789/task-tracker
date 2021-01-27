@@ -1,7 +1,12 @@
-const tasks = [
+import { useState } from 'react';
+
+
+const Tasks = () => {
+
+	const [tasks, setTasks] = useState([
 	{
 		id: 1,
-		text: "But Tissue paper roll",
+		text: "Buy Tissue paper roll",
 		day: "January 26th at 4:00 pm",
 		reminder: false,
 	},
@@ -17,14 +22,15 @@ const tasks = [
 		day: "January 26th at 4:00 pm",
 		reminder: false,
 	}
-]
+]);
 
-const Tasks = () => {
 	return (
 		<>
-			{tasks.map()}
+			{tasks.map((task)=> (
+				<h3>{task.text}</h3>
+			) )}
 		</>
 	)
 }
 
-export default Tasks
+export default Tasks;

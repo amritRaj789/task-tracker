@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
+
+
 const Header = (props) => {
 	const onClick = (e) => {
 		console.log(e);
@@ -12,6 +14,7 @@ const Header = (props) => {
 		</header>
 	)
 }
+
 
 Header.defaultProps = {
 	title: "Task Tracker",
