@@ -8,7 +8,6 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 const App = () => {
   const [showAddTask, setShowAddTask] = useState(false);
-
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
@@ -26,7 +25,7 @@ const App = () => {
       return data;
   }
 
-  //Fetch Task
+  //Fetch a single Task
   const fetchTask = async (id) => {
     const res = await fetch(`http://localhost:5000/tasks/${id}`);
     const data = await res.json();
@@ -80,7 +79,6 @@ const App = () => {
     <Router>
     <div className="container">
       <Header onAdd={() => setShowAddTask(!showAddTask)} showAdd={showAddTask}/>
-      
       <Route 
        path='/'
        exact 
